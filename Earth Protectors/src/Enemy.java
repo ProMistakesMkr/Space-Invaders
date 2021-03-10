@@ -2,8 +2,8 @@ import processing.core.PApplet;
 
 public class Enemy extends Player {
 
-private boolean isMov;
-	
+	private boolean isMov;
+
 	public Enemy(int posX, int posY, PApplet app) {
 		super(posX, posY, app);
 		isMov = true;
@@ -20,21 +20,27 @@ private boolean isMov;
 	@Override
 	public void mov(PApplet app) {
 		if (isMov) {
-			posX+=2;
+			posX += 2;
 		}
-	
+
+		if(posX>=1250) {
+			posX=-50;
+			posY=300;
+			}
 	}
-	
+
 	public int getPosX() {
 		return posX;
 	}
+
 	public int getPosY() {
 		return posY;
 	}
-	
+
 	public void setPosY(int posY) {
 		this.posY = posY;
 	}
+
 	public void setPosX(int posX) {
 		this.posX = posX;
 	}
