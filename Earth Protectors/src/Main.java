@@ -220,7 +220,7 @@ public class Main extends PApplet {
 
 	private void backHome() {
 		if (screenChange == 1 || screenChange == 2 || screenChange == 4) {
-			if (mouseX > 41 && mouseX < 116 && mouseY > 35 && mouseY < 53) {
+			if (mouseX > 500 && mouseX < 600 && mouseY > 35 && mouseY < 100) {
 				screenChange = 0;
 			}
 		}
